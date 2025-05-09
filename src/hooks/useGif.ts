@@ -10,7 +10,7 @@ const useGif = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const searchGif = async (inputValue: string) => {
-    const data = await getGifts(inputValue);
+    const data = await getGifts(inputValue.trim());
 
     const gifs = data.map((gifApi: GifAPIResponseType) => giftToLocalhostMapper(gifApi));
 

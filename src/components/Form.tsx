@@ -7,7 +7,7 @@ type FormProps = {
 
 const Form = ({ inputValue, setInputValue, searchGif, setIsLoading }: FormProps) => {
 
-  const onChangeInput = (event: React.ChangeEvent<HTMLInputElement>) => setInputValue(event.target.value.trim());
+  const onChangeInput = (event: React.ChangeEvent<HTMLInputElement>) => setInputValue(event.target.value);
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
