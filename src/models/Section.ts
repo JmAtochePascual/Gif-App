@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import type { Gift } from './Gift';
 
-export class GifSection {
+export class Section {
 
   id: string;
   title: string;

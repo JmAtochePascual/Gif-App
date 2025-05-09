@@ -1,11 +1,12 @@
 import { Gift } from "../models/Gift";
+import type { GifAPIResponseType } from "../types";
 
-export const giftToLocalhost = (gifApi) => {
-  const { id, title, src: images } = gifApi;
+export const giftToLocalhostMapper = (gifApi: GifAPIResponseType) => {
+  const { id, title, images: { downsized_medium: { url } } } = gifApi;
 
   return new Gift({
     id,
     title,
-    src: images.downsized_medium.url
+    image: url
   });
 };
