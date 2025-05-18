@@ -21,6 +21,7 @@ const Form = ({ inputValue, setInputValue, searchGif, setIsLoading }: FormProps)
 
   return (
     <form
+      role="form"
       onSubmit={onSubmit}
       className="mb-8" >
       <input
