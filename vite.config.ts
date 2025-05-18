@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import tailwindcss from '@tailwindcss/vite'
@@ -8,5 +9,9 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/Gif-App/'
+  base: '/Gif-App/',
+  test: {
+    environment: "jsdom",
+    globals: true,
+  },
 })
