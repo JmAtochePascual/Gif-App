@@ -2,7 +2,7 @@ import type { Gift } from "../models/Gift"
 
 type GifProps = {
   gif: Gift;
-}
+};
 
 const Gif = ({ gif }: GifProps) => {
   return (
@@ -12,7 +12,7 @@ const Gif = ({ gif }: GifProps) => {
         alt={gif.title}
         className="w-full h-36 object-cover" />
     </div>
-  )
-}
+  );
+};
 
 export default Gif

@@ -1,11 +1,12 @@
+import { useState } from "react";
+
 type FormProps = {
-  inputValue: string;
-  setInputValue: (value: string) => void;
   searchGif: (inputValue: string) => Promise<void>;
   setIsLoading: (value: boolean) => void;
 };
 
-const Form = ({ inputValue, setInputValue, searchGif, setIsLoading }: FormProps) => {
+const Form = ({ searchGif, setIsLoading }: FormProps) => {
+  const [inputValue, setInputValue] = useState('');
 
   const onChangeInput = (event: React.ChangeEvent<HTMLInputElement>) => setInputValue(event.target.value);
 

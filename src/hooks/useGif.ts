@@ -5,7 +5,6 @@ import type { GifAPIResponseType } from "../types";
 import { giftToLocalhostMapper } from "../mapper/gift-to-localhost";
 
 const useGif = () => {
-  const [inputValue, setInputValue] = useState('');
   const [sections, setSections] = useState<Section[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -23,9 +22,7 @@ const useGif = () => {
 
   return {
     sections,
-    inputValue,
     isLoading,
-    setInputValue,
     setSections,
     searchGif,
     setIsLoading,
